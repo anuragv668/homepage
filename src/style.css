@@ -18,7 +18,7 @@ body > *{
   /* background-color: #0891b2; */
   font-family: "Roboto", sans-serif;
   padding: 5%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 img {
@@ -26,9 +26,20 @@ img {
   max-width: 100%;
 }
 
+.logo {
+  height: 40px;
+}
+
+/*  header start  */
 .profile-pic {
   position: relative;
-  margin-bottom: 30px;
+  box-shadow: 3px 3px 10px grey;
+  /* margin-bottom: 30px; */
+}
+
+.profile-pic img {
+  object-fit: cover;
+  background-position: center;
 }
 
 .name {
@@ -41,10 +52,8 @@ img {
 }
 
 .about-text {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 100px;
+  gap: 20px;
+  padding: 10px;
 }
 
 .about-text h3 {
@@ -54,26 +63,29 @@ img {
   font-weight: 500;
 }
 
-.about-text p {
+.about-text > p {
   color: #565656;
   font-size: 1.2rem;
 }
 
 header {
-  /* width: 100%; */
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background: linear-gradient(154deg, #0891b2 50%, white 50%);
+  margin-bottom: 50px;
+  position: relative;
 }
+
+ /* end */
 
 .projects-container{
   display: grid;
   /* justify-content: space-around; */
   /* align-items: end; */
   place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 70px;
   padding: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .work {
@@ -81,6 +93,7 @@ header {
   font-size: 3rem;
   text-align: center;
   font-weight: 500;
+  padding: 20px;
 }
 
 .projects {
@@ -88,8 +101,7 @@ header {
   max-width: 400px;
   display: flex;
   flex-direction: column;
-  box-shadow: 5px 5px 15px grey;
-  
+  box-shadow: 3px 3px 15px grey;
 }
 
 .project-image {
@@ -131,6 +143,7 @@ header {
   flex-grow: 1;
   color: #595959;
   text-align: center;
+  padding: 0 20px;
 }
 
 footer {
@@ -143,13 +156,6 @@ footer {
   overflow: hidden;
 }
 
-footer > h3 {
-  font-family: "Playfair_Display";
-  font-weight: 400;
-  font-size: 3rem;
-  text-align: center;
-}
-
 .socials {
   display: flex;
   justify-content: center;
@@ -157,22 +163,13 @@ footer > h3 {
   gap: 20px;
 }
 
-.socials img {
-  height: 40px;
-}
-
-.contacts img {
-  height: 40px;
-}
-
 .footer-image { 
   width: 100%;
-
 }
 
 .footer-image  img {
   min-width: 300px;
-  height: 500px;
+  height: 480px;
   object-fit: cover;
   object-position: center;
 }
@@ -180,8 +177,16 @@ footer > h3 {
 .contact-me-texts {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 15px;
   padding: 15px;
+}
+
+.contact-header {
+  font-family: "Playfair_Display";
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
 }
 
 .contacts {
@@ -191,8 +196,74 @@ footer > h3 {
   gap: 10px;
 }
 
+.contacts img {
+  height: 1.4rem;
+}
+
 .contact-request {
   font-weight: 400;
   font-size: 1.5rem;
 }
 
+@media screen and (min-width: 678px) { 
+  .work {
+     text-align: left;
+  }
+  footer {
+     flex-direction: row;
+     padding: 20px;
+     gap: 20px;
+  }
+  .contact-header {
+     text-align: left;
+     font-size: 2.6rem;
+  }
+  .contact-request {
+     font-size: 1.1rem;
+  } 
+  footer .socials {
+     justify-content: flex-start;
+  } 
+
+  /* header start  */
+
+  header {
+    padding: 50px;
+  }
+
+  .profile-pic {
+    float: left;
+    height: 300px;
+    width: 300px;
+    z-index: 2;
+    margin: 20px;
+    position: relative;
+    margin-top: -110px;
+    margin-left: -50px;
+  }
+  
+  .about-text {
+    position: relative;
+    padding: 30px;
+    box-shadow: 3px 3px 10px grey;
+    background-color: white;
+    top: 5rem; 
+  } 
+  header .socials {
+    justify-content: flex-end;
+  }
+     
+  .profile-pic img{
+    height: 100%;
+    width: 100%;
+  }
+  .name {
+    font-size: 3.5rem;
+    bottom: auto;
+    left: auto;
+    top: 0%;
+    right: -110%;
+  }
+}
+
+/* next media at 1036width*/

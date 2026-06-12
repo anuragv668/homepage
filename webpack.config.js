@@ -6,6 +6,7 @@ export default {
   entry: "./src/script.js",
   output : {
     filename: "main.js",
+    // publicPath: "/homepage",
     path: path.resolve(import.meta.dirname, 'dist'),
     clean: true,
   },
